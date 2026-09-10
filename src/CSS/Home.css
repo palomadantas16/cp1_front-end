@@ -1,0 +1,48 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 8rem;
+  align-items: center;
+  padding: 2rem 0 3rem;
+}
+
+.hero-texto h1 {
+  font-size: 2.4rem;
+  line-height: 1.2;
+  margin-top: 5rem;
+  max-width: 800px;
+}
+
+.hero-texto p {
+  color: var(--cinza-suave);
+  font-size: 1rem;
+  max-width: 42ch;
+  margin-bottom: 1.5rem;
+}
+
+.hero-terminal img {
+  background: #1c2333;
+  border-radius: 10px;
+  width: 450px;
+  height: 250px;
+}
+
+.botao-primario-home {
+  display: inline-block;
+  background: var(--principal-azul);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--raio);
+  font-weight: 500;
+}
+
+.botao-primario-home:hover {
+  background: var(--principal-azul-escuro);
+}
+
+.recursos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.4rem;
+  margin: 3rem 0 1rem;
+}

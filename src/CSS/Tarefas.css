@@ -1,0 +1,213 @@
+.pagina-tarefas-cabecalho {
+  margin-bottom: 1.6rem;
+}
+
+.tarefas-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.4fr;
+  gap: 1.8rem;
+  align-items: start;
+}
+
+.tarefa-formulario {
+  background: var(--fundo-cartao);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 1.5rem;
+  position: sticky;
+  top: 90px;
+}
+
+.campo {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.campo label {
+  font-size: 0.82rem;
+  color: var(--cinza-suave);
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 0.6rem 0.75rem;
+  font-size: 0.92rem;
+  font-family: "Montserrat", sans-serif;
+  background: #fff;
+  resize: vertical;
+}
+
+.linha-campos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.tarefa-filtros {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 1.2rem;
+  flex-wrap: wrap;
+}
+
+.filtro-botao {
+  background: var(--fundo-cartao);
+  border: 1px solid var(--borda);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  color: var(--cinza-suave);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.filtro-botao.ativo {
+  background: var(--principal-azul);
+  border-color: var(--principal-azul);
+  color: #fff;
+}
+
+.filtro-contagem {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.75rem;
+  background: rgba(0, 0, 0, 0.08);
+  padding: 0.05rem 0.4rem;
+  border-radius: 999px;
+}
+
+.filtro-botao.ativo .filtro-contagem {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.tarefas-lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.tarefa-item {
+  display: flex;
+  gap: 0.9rem;
+  background: var(--fundo-cartao);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 1rem 1.1rem;
+}
+
+.tarefa-item.concluida {
+  opacity: 0.6;
+}
+
+.tarefa-item.concluida .tarefa-nome {
+  text-decoration: line-through;
+}
+
+.tarefa-checkbox {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--principal-azul);
+  background: transparent;
+  color: var(--principal-azul);
+  font-size: 0.8rem;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tarefa-item.concluida .tarefa-checkbox {
+  background: var(--principal-azul);
+  color: #fff;
+}
+
+.tarefa-corpo {
+  flex: 1;
+}
+
+.tarefa-cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+.tarefa-nome {
+  font-weight: 500;
+}
+
+.tarefa-prioridade {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+}
+
+.prioridade-baixa {
+  background: rgba(47, 122, 79, 0.12);
+  color: var(--sucesso);
+}
+
+.prioridade-media {
+  background: rgba(200, 134, 45, 0.15);
+  color: var(--atencao);
+}
+
+.prioridade-alta {
+  background: rgba(178, 58, 72, 0.12);
+  color: var(--perigo);
+}
+
+.tarefa-descricao {
+  font-size: 1rem;
+  color: var(--cinza-suave);
+  margin: 8px 0;
+}
+
+.tarefa-rodape {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.tarefa-data {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  color: var(--cinza-suave);
+}
+
+.tarefa-remover {
+  background: transparent;
+  color: var(--perigo);
+  font-size: 12px;
+}
+
+.tarefas-vazio {
+  color: var(--cinza-suave);
+  text-align: center;
+  padding: 2.5rem 1rem;
+  background: var(--fundo-cartao);
+  border: 1px dashed var(--borda);
+  border-radius: var(--raio);
+}
+
+@media (max-width: 800px) {
+  .tarefas-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .tarefa-formulario {
+    position: static;
+  }
+}
