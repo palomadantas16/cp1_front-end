@@ -1,0 +1,49 @@
+.cabecalho {
+  background: var(--fundo-cartao);
+  border-bottom: 1px solid var(--borda);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.cabecalho-conteudo {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 1.1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.marca {
+  display: flex;
+  align-items: baseline;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--principal-azul);
+}
+
+.navegacao {
+  display: flex;
+  gap: 1.8rem;
+}
+
+.navegacao a {
+  font-size: 0.95rem;
+  color: var(--cinza-suave);
+  padding-bottom: 0.2rem;
+  border-bottom: 2px solid transparent;
+}
+
+.navegacao a.ativo,
+.navegacao a:hover {
+  border-bottom-color: var(--principal-azul);
+  color: var(--tom-azul-escuro);
+}
+
+@media (max-width: 600px) {
+  .navegacao {
+    gap: 1rem;
+  }
+}

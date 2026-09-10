@@ -1,0 +1,29 @@
+.rodape {
+  background: var(--principal-azul);
+  color: #d7dce4;
+  margin-top: 3rem;
+}
+
+.rodape-conteudo {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.rodape-coluna h4 {
+  color: #f2f4f8;
+  font-size: 1rem;
+  margin-bottom: 0.7rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.rodape-coluna p {
+  color: #a9b2c0;
+  font-size: 0.88rem;
+  margin: 0;
+  max-width: 32ch;
+}
