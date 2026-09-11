@@ -58,4 +58,10 @@ A aplicação permite que o usuário tenha uma visão geral de suas atividades e
 A aplicação possui uma interface simples e intuitiva, permitindo visualizar as tarefas cadastradas e seu respectivo status.
 
 
-(Link do repositório)[https://github.com/palomadantas16/cp1_front-end.git]
+[Link do repositório](https://github.com/palomadantas16/cp1_front-end.git)
+
+[Link do vercel](cp1-front-end-k3ay.vercel.app)
+
+# Integrantes 
+
+Amanda Lourenço, 572572 | Giovanna Scalzone, 572285 | Nayra Duarte, 573815 | Paloma Dantas, 569995.
