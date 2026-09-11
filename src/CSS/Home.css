@@ -1,7 +1,7 @@
 .hero {
   display: grid;
   grid-template-columns: 1.1fr 1fr;
-  gap: 8rem;
+  gap: 4rem;
   align-items: center;
   padding: 2rem 0 3rem;
 }
@@ -9,22 +9,31 @@
 .hero-texto h1 {
   font-size: 2.4rem;
   line-height: 1.2;
-  margin-top: 5rem;
+  margin-top: 2rem;
   max-width: 800px;
 }
 
 .hero-texto p {
   color: var(--cinza-suave);
   font-size: 1rem;
+  line-height: 1.6;
   max-width: 42ch;
   margin-bottom: 1.5rem;
+}
+
+.hero-terminal {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .hero-terminal img {
   background: #1c2333;
   border-radius: 10px;
-  width: 450px;
-  height: 250px;
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  display: block;
 }
 
 .botao-primario-home {
@@ -34,6 +43,8 @@
   padding: 0.75rem 1.5rem;
   border-radius: var(--raio);
   font-weight: 500;
+  text-decoration: none;
+  transition: 0.2s;
 }
 
 .botao-primario-home:hover {
@@ -45,4 +56,82 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1.4rem;
   margin: 3rem 0 1rem;
+}
+
+
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    padding: 2rem 1.5rem 3rem;
+    text-align: center;
+  }
+
+  .hero-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-texto h1 {
+    font-size: 2.1rem;
+    margin-top: 1rem;
+  }
+
+  .hero-texto p {
+    max-width: 600px;
+  }
+
+  .hero-terminal img {
+    max-width: 500px;
+  }
+
+  .recursos {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 1rem 1rem 2.5rem;
+  }
+
+  .hero-texto h1 {
+    font-size: 1.8rem;
+    line-height: 1.25;
+    margin-top: 0.5rem;
+  }
+
+  .hero-texto p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    max-width: 100%;
+  }
+
+  .botao-primario-home {
+    width: 100%;
+    max-width: 300px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .hero-terminal {
+    width: 100%;
+  }
+
+  .hero-terminal img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .recursos {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 2rem 1rem;
+  }
 }
