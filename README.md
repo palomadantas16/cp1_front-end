@@ -60,7 +60,7 @@ A aplicação possui uma interface simples e intuitiva, permitindo visualizar as
 
 [Link do repositório](https://github.com/palomadantas16/cp1_front-end.git)
 
-[Link do vercel](cp1-front-end-k3ay.vercel.app)
+[Link do vercel](https://cp1-front-end-k3ay.vercel.app/)
 
 # Integrantes 
 
