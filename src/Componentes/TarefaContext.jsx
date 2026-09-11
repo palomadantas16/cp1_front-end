@@ -22,7 +22,6 @@ export function TarefaProvider({ children }) {
       return [];
     }
   });
- (todas / pendentes / concluídas)
   const [filtroAtivo, setFiltroAtivo] = useState("todas");
 
   // HOOK useEffect: é o hook de "efeito colateral". Ele roda toda vez que o
