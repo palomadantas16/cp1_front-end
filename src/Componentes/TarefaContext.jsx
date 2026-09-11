@@ -4,14 +4,14 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 const CHAVE_STORAGE = "devtask_tarefas";
 
 // Contexto que compartilha os dados de tarefas com toda a aplicação,
-// evitando ter que passar props manualmente por vários componentes (prop drilling)
+// evitando ter que passar props manualmente por vários componentes.
 const TarefaContext = createContext(null);
 
 export function TarefaProvider({ children }) {
 
   // HOOK useState: guarda a lista de tarefas em memória.
   // A função passada para useState só roda UMA vez, na primeira renderização,
-  // e serve para ler os dados que já estavam salvos no localStorage —
+  // e serve para ler os dados que já estavam salvos no localStorage,
   // é assim que garantimos a persistência automática ao recarregar a página.
   const [tarefas, setTarefas] = useState(() => {
     try {
@@ -22,12 +22,11 @@ export function TarefaProvider({ children }) {
       return [];
     }
   });
-
-  // HOOK useState: controla qual filtro está ativo (todas / pendentes / concluídas)
+ (todas / pendentes / concluídas)
   const [filtroAtivo, setFiltroAtivo] = useState("todas");
 
   // HOOK useEffect: é o hook de "efeito colateral". Ele roda toda vez que o
-  // valor dentro do array de dependências ([tarefas]) muda — ou seja, toda
+  // valor dentro do array de dependências ([tarefas]) muda, ou seja, toda
   // vez que uma tarefa é criada, removida ou alterada. Usamos isso para
   // SALVAR automaticamente a lista atualizada no localStorage.
   useEffect(() => {
@@ -56,7 +55,7 @@ export function TarefaProvider({ children }) {
 
   // CALLBACK: remove uma tarefa pelo id.
   // Usa o método de array FILTER, que cria uma nova lista contendo apenas
-  // os itens que NÃO têm o id informado — ou seja, "filtra para fora" a
+  // os itens que NÃO têm o id informado, ou seja, "filtra para fora" a
   // tarefa removida, sem alterar a lista original (imutabilidade).
   function removerTarefa(id) {
     setTarefas((atuais) => atuais.filter((tarefa) => tarefa.id !== id));
@@ -104,7 +103,7 @@ export function TarefaProvider({ children }) {
   );
 }
 
-// HOOK customizado (usa useContext por baixo dos panos) para consumir o
+// HOOK customizado para consumir o
 // contexto com uma mensagem de erro amigável caso seja usado fora do Provider
 export function useTarefas() {
   const contexto = useContext(TarefaContext);

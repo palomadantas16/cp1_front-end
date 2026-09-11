@@ -1,7 +1,7 @@
 import React from "react";
 import { useTarefas } from "./TarefaContext";
 
-// Converte uma data no formato ISO (aaaa-mm-dd) para o formato brasileiro (dd/mm/aaaa)
+// Converte uma data no formato ISO para o formato brasileiro
 function formatarData(iso) {
   if (!iso) return "";
   const [ano, mes, dia] = iso.split("-");

@@ -8,8 +8,7 @@ export default function TarefaForm({ onCriar }) {
   // Pega a função de cadastro que vem do contexto global de tarefas
   const { adicionarTarefa } = useTarefas();
 
-  // HOOK useState: guarda os valores digitados no formulário (Nome, Data,
-  // Descrição e Prioridade) em um único objeto
+  // HOOK useState: guarda os valores digitados no formulárioem um único objeto
   const [form, setForm] = useState({
     nome: "",
     data: "",
@@ -28,7 +27,7 @@ export default function TarefaForm({ onCriar }) {
     setForm((atual) => ({ ...atual, [name]: value }));
   }
 
-  // CALLBACK: chamada ao enviar o formulário (submit)
+  // CALLBACK: chamada ao enviar o formulário 
   function aoEnviar(evento) {
     evento.preventDefault(); // evita o recarregamento padrão da página
 
@@ -42,7 +41,7 @@ export default function TarefaForm({ onCriar }) {
     setErro("");
     setForm({ nome: "", data: "", descricao: "", prioridade: "Média" });
 
-    // Avisa o componente pai (Tarefas.jsx) que uma tarefa foi criada,
+    // Avisa o componente pai que uma tarefa foi criada,
     // para que ele possa exibir o Toast de sucesso
     if (onCriar) onCriar();
   }

@@ -7,14 +7,13 @@ import { useTarefas } from "../Componentes/TarefaContext";
 import "../CSS/Tarefas.css";
 
 export default function Tarefas() {
-  // Lista já filtrada de acordo com o filtro ativo (vem do contexto global)
+  // Lista já filtrada de acordo com o filtro ativo 
   const { tarefasFiltradas, filtroAtivo } = useTarefas();
 
   // HOOK useState: controla a mensagem exibida no Toast de feedback
   const [mensagemToast, setMensagemToast] = useState("");
 
-  // CALLBACK: passada como prop para o TarefaForm; é chamada por ele
-  // sempre que uma nova tarefa é cadastrada com sucesso
+  // CALLBACK: passada como prop para o TarefaForm, é chamada por ele sempre que uma nova tarefa é cadastrada com sucesso
   function aoCriarTarefa() {
     setMensagemToast("Tarefa adicionada com sucesso!");
   }
